@@ -15,6 +15,7 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {HttpLoaderFactory} from './app.translate.factory';
 import {HeroTopComponent} from './heroes/hero-top/hero-top.component';
 import {HeroService} from './heroes/shared/hero.service';
+import { MenuListXComponent } from './menu-list-x/menu-list-x.component';
 
 @NgModule({
   imports: [
@@ -35,7 +36,8 @@ import {HeroService} from './heroes/shared/hero.service';
   ],
   declarations: [
     AppComponent,
-    HeroTopComponent
+    HeroTopComponent,
+    MenuListXComponent
   ],
   providers: [
     {provide: APP_CONFIG, useValue: AppConfig},
