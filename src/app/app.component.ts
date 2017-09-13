@@ -1,9 +1,11 @@
-import {Component} from '@angular/core';
-import {TranslateService} from '@ngx-translate/core';
-import {Meta, Title} from '@angular/platform-browser';
+import { Component, Input } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { Meta, Title } from '@angular/platform-browser';
 
-import {NavigationEnd, Router} from '@angular/router';
-import {AppConfig} from './config/app.config';
+import { NavigationEnd, Router } from '@angular/router';
+import { AppConfig } from './config/app.config';
+import { HomeService } from './shared/services/home-service';
+import { HomeModel } from './shared/models/home.model';
 
 @Component({
   selector: 'app-root',
@@ -11,11 +13,13 @@ import {AppConfig} from './config/app.config';
 })
 
 export class AppComponent {
+  @Input() dataList: Array<any> = [];
 
   constructor(private translateService: TranslateService,
-              private title: Title,
-              private meta: Meta,
-              private router: Router) {
+    private title: Title,
+    private meta: Meta,
+    private homeService:HomeService,
+    private router: Router) {
 
     this.translateService = translateService;
     this.translateService.setDefaultLang('en');
@@ -25,7 +29,7 @@ export class AppComponent {
       if (event instanceof NavigationEnd) {
         switch (event.urlAfterRedirects) {
           case '/':
-            this.title.setTitle('Angular Example App');
+            this.title.setTitle('ละมุนภัณฑ์ ซื้อของออนไลน์');
             this.meta.updateTag({
               name: 'description',
               content: 'Angular 4 Example app with Angular CLI, Angular Material and more'
@@ -41,5 +45,15 @@ export class AppComponent {
         }
       }
     });
+
+    this.componentService();
+  }
+
+  componentService() {
+    this.homeService.getData().subscribe((data : Array<HomeModel>) =>{
+      console.log(data);
+    });
   }
 }
+
+

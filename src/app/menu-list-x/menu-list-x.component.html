@@ -2,47 +2,15 @@
   <md-tab label="อิเล็กทรอนิกส์" class="padding">
     <p class="mg-bottom"><b>Top Sellers</b></p>
     <md-grid-list cols="5">
-      <md-grid-tile *ngFor="let bs of bestSeller">
+      <md-grid-tile *ngFor="let ts of topSellers">
         <md-card class="example-card">
-          <img md-card-image [src]="bs.img" alt="Photo of a Shiba Inu">
+          <img md-card-image [src]="ts.img" alt="Photo of a Shiba Inu">
           <md-card-content class="mg-top">
             <p>
-              {{bs.name}}
+              {{ts.name}}
             </p>
             <p class="txt-red">
-              {{bs.price | number}} บาท
-            </p>
-          </md-card-content>
-        </md-card>
-      </md-grid-tile>
-    </md-grid-list>
-    <p class="mg-bottom"><b>สินค้าลดราคา</b></p>
-    <md-grid-list cols="5">
-      <md-grid-tile *ngFor="let bs of bestSeller">
-        <md-card class="example-card">
-          <img md-card-image [src]="bs.img" alt="Photo of a Shiba Inu">
-          <md-card-content class="mg-top">
-            <p>
-              {{bs.name}}
-            </p>
-            <p class="txt-red">
-              {{bs.price | number}} บาท
-            </p>
-          </md-card-content>
-        </md-card>
-      </md-grid-tile>
-    </md-grid-list>
-    <p class="mg-bottom"><b>สินค้ายอดนิยม</b></p>
-    <md-grid-list cols="5">
-      <md-grid-tile *ngFor="let bs of bestSeller">
-        <md-card class="example-card">
-          <img md-card-image [src]="bs.img" alt="Photo of a Shiba Inu">
-          <md-card-content class="mg-top">
-            <p>
-              {{bs.name}}
-            </p>
-            <p class="txt-red">
-              {{bs.price | number}} บาท
+              {{ts.price | number}} บาท
             </p>
           </md-card-content>
         </md-card>
@@ -61,9 +29,6 @@
 <md-tab label="สุขภาพและความงาม">
   <h1>สินค้า สุขภาพและความงาม</h1>
 </md-tab>
-<!-- <md-tab label="สัตว์เลี้ยง และ สินค้าอุปโภคบริโภค">
-  <h1>สินค้า สัตว์เลี้ยง และ สินค้าอุปโภคบริโภค</h1>
-</md-tab> -->
 <md-tab label="เด็กและของเล่น">
   <h1>สินค้า เด็กและของเล่น</h1>
 </md-tab>

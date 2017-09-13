@@ -16,6 +16,7 @@ import {HttpLoaderFactory} from './app.translate.factory';
 import {HeroTopComponent} from './heroes/hero-top/hero-top.component';
 import {HeroService} from './heroes/shared/hero.service';
 import { MenuListXComponent } from './menu-list-x/menu-list-x.component';
+import { HomeService } from './shared/services/home-service';
 
 @NgModule({
   imports: [
@@ -41,7 +42,8 @@ import { MenuListXComponent } from './menu-list-x/menu-list-x.component';
   ],
   providers: [
     {provide: APP_CONFIG, useValue: AppConfig},
-    HeroService
+    HeroService,
+    HomeService
   ],
   bootstrap: [AppComponent]
 })
