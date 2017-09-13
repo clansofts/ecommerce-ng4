@@ -1,5 +1,6 @@
 export class HomeModel {
     topSellers: Array<TopSellersModel>;
+    recommendProduct: Array<TopSellersModel>;
 }
 
 export class TopSellersModel {

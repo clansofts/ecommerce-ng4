@@ -7,7 +7,7 @@ import { HomeModel } from "../models/home.model";
 export class HomeService {
     constructor(public http: HttpClient) { }
 
-    getData(): Observable<HomeModel[]> {
+    getData(): Observable<HomeModel> {
         return this.http.get('./assets/mockup-data/home.json')
           .map(response => {
             

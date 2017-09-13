@@ -1,0 +1,16 @@
+<p class="mg-bottom tb">{{title}}</p>
+<md-grid-list cols="5">
+  <md-grid-tile *ngFor="let data of dataList">
+    <md-card class="example-card">
+      <img md-card-image [src]="data.img" alt="img">
+      <md-card-content class="mg-top">
+        <p>
+          {{data.name}}
+        </p>
+        <p class="txt-red">
+          {{data.price | number}} บาท
+        </p>
+      </md-card-content>
+    </md-card>
+  </md-grid-tile>
+</md-grid-list>

@@ -1,21 +1,7 @@
 <md-tab-group>
   <md-tab label="อิเล็กทรอนิกส์" class="padding">
-    <p class="mg-bottom"><b>Top Sellers</b></p>
-    <md-grid-list cols="5">
-      <md-grid-tile *ngFor="let ts of topSellers">
-        <md-card class="example-card">
-          <img md-card-image [src]="ts.img" alt="Photo of a Shiba Inu">
-          <md-card-content class="mg-top">
-            <p>
-              {{ts.name}}
-            </p>
-            <p class="txt-red">
-              {{ts.price | number}} บาท
-            </p>
-          </md-card-content>
-        </md-card>
-      </md-grid-tile>
-    </md-grid-list>
+    <app-product-list-x [dataList]="dataList.topSellers" [title]="'สินค้าขายดี'"></app-product-list-x>
+    <app-product-list-x [dataList]="dataList.recommendProduct" [title]="'สินค้าแนะนำสำหรับคุณ'"></app-product-list-x>
   </md-tab>
   <md-tab label="แฟชั่นสุภาพสตรี">
     <router-outlet></router-outlet>    

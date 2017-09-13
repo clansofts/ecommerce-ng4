@@ -1,11 +1,9 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Meta, Title } from '@angular/platform-browser';
 
 import { NavigationEnd, Router } from '@angular/router';
 import { AppConfig } from './config/app.config';
-import { HomeService } from './shared/services/home-service';
-import { HomeModel } from './shared/models/home.model';
 
 @Component({
   selector: 'app-root',
@@ -13,12 +11,10 @@ import { HomeModel } from './shared/models/home.model';
 })
 
 export class AppComponent {
-  @Input() dataList: Array<any> = [];
 
   constructor(private translateService: TranslateService,
     private title: Title,
     private meta: Meta,
-    private homeService:HomeService,
     private router: Router) {
 
     this.translateService = translateService;
@@ -44,14 +40,6 @@ export class AppComponent {
             break;
         }
       }
-    });
-
-    this.componentService();
-  }
-
-  componentService() {
-    this.homeService.getData().subscribe((data : Array<HomeModel>) =>{
-      console.log(data);
     });
   }
 }
