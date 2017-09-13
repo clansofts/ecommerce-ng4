@@ -1,27 +1,32 @@
 <md-tab-group>
   <md-tab label="อิเล็กทรอนิกส์" class="padding">
+    <md-grid-list cols="4" rowHeight="200px" class="mg-bottom">
+      <md-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background-image]="tile.color" [style.background-size]="'cover'">
+        <!-- {{tile.text}} -->
+      </md-grid-tile>
+    </md-grid-list>
     <app-product-list-x [dataList]="dataList.topSellers" [title]="'สินค้าขายดี'"></app-product-list-x>
     <app-product-list-x [dataList]="dataList.recommendProduct" [title]="'สินค้าแนะนำสำหรับคุณ'"></app-product-list-x>
   </md-tab>
   <md-tab label="แฟชั่นสุภาพสตรี">
-    <router-outlet></router-outlet>    
+    <router-outlet></router-outlet>
   </md-tab>
   <md-tab label="แฟชั่นสุภาพบุรุษ">
     <h1>สินค้า แฟชั่นสุภาพบุรุษ</h1>
-</md-tab>
-<md-tab label="เครื่องใช้ไฟฟ้าและของในบ้าน">
-  <h1>สินค้า เครื่องใช้ไฟฟ้าและของในบ้าน</h1>
-</md-tab>
-<md-tab label="สุขภาพและความงาม">
-  <h1>สินค้า สุขภาพและความงาม</h1>
-</md-tab>
-<md-tab label="เด็กและของเล่น">
-  <h1>สินค้า เด็กและของเล่น</h1>
-</md-tab>
-<md-tab label="กีฬาและการเดินทาง">
-  <h1>สินค้า กีฬาและการเดินทาง</h1>
-</md-tab>
-<md-tab label="ไฮไลท์">
-  <h1>สินค้า ไฮไลท์</h1>
-</md-tab>
+  </md-tab>
+  <md-tab label="เครื่องใช้ไฟฟ้าและของในบ้าน">
+    <h1>สินค้า เครื่องใช้ไฟฟ้าและของในบ้าน</h1>
+  </md-tab>
+  <md-tab label="สุขภาพและความงาม">
+    <h1>สินค้า สุขภาพและความงาม</h1>
+  </md-tab>
+  <md-tab label="เด็กและของเล่น">
+    <h1>สินค้า เด็กและของเล่น</h1>
+  </md-tab>
+  <md-tab label="กีฬาและการเดินทาง">
+    <h1>สินค้า กีฬาและการเดินทาง</h1>
+  </md-tab>
+  <md-tab label="ไฮไลท์">
+    <h1>สินค้า ไฮไลท์</h1>
+  </md-tab>
 </md-tab-group>
