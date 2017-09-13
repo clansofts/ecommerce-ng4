@@ -18,6 +18,7 @@ import {HeroService} from './heroes/shared/hero.service';
 import { MenuListXComponent } from './menu-list-x/menu-list-x.component';
 import { HomeService } from './shared/services/home-service';
 import { ProductListXComponent } from './product-list-x/product-list-x.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
   imports: [
@@ -40,7 +41,8 @@ import { ProductListXComponent } from './product-list-x/product-list-x.component
     AppComponent,
     HeroTopComponent,
     MenuListXComponent,
-    ProductListXComponent
+    ProductListXComponent,
+    ProductDetailComponent
   ],
   providers: [
     {provide: APP_CONFIG, useValue: AppConfig},

@@ -1,6 +1,6 @@
 <p class="mg-bottom tb">{{title}}</p>
 <md-grid-list cols="5">
-  <md-grid-tile *ngFor="let data of dataList">
+  <md-grid-tile *ngFor="let data of dataList" (click)="openProductDetail(data._id)">
     <md-card class="example-card">
       <img md-card-image [src]="data.img" alt="img">
       <md-card-content class="mg-top">
