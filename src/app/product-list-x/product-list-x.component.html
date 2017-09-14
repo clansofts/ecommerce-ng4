@@ -1,5 +1,5 @@
 <p class="mg-bottom tb">{{title}}</p>
-<md-grid-list cols="5">
+<md-grid-list [cols]="gridCols" (window:resize)="onResize($event)">
   <md-grid-tile *ngFor="let data of dataList" (click)="openProductDetail(data._id)">
     <md-card class="example-card">
       <img md-card-image [src]="data.img" alt="img">

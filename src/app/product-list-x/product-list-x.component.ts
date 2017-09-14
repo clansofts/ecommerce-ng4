@@ -10,7 +10,7 @@ import { AppConfig } from '../config/app.config';
 export class ProductListXComponent implements OnInit {
   @Input() dataList: Array<any> = [];
   @Input() title: string = '';
-
+  private gridCols: number = 5;
   private section_1: boolean = true;
 
   constructor(private router: Router) { }
@@ -18,10 +18,35 @@ export class ProductListXComponent implements OnInit {
   ngOnInit() {
   }
 
-  openProductDetail(_id){
+  openProductDetail(_id) {
     // this.router.navigate([AppConfig.routes.heroes + '/' + _id]);
     this.section_1 = false;
     this.router.navigate(['/productdetail']);
+  }
+
+  onResize(event) {
+    const element = event.target.innerWidth;
+    console.log(element);
+
+
+    if (element < 950) {
+      this.gridCols = 4;      
+    }
+
+    if (element > 950) {
+      this.gridCols = 5;
+
+    }
+
+    if (element < 750) {
+      this.gridCols = 2;      
+
+    }
+
+    if (element < 360) {
+      this.gridCols = 1;      
+
+    }
   }
 
 }
