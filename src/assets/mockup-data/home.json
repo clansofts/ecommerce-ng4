@@ -23,12 +23,6 @@
             "name": "Canon PIXMA IP2770 InkJet Printer ติดตั้ง TANK",
             "price": 2379,
             "img": "https://th-live-02.slatic.net/p/2/canon-pixma-ip2770-inkjet-printer-tank-1471420230-5018877-70394e17a8d8e5f7d8c0bc1b79829dd8-webp-zoom.jpg"
-        },
-        {
-            "_id": "5",
-            "name": "ACER Aspire VX5-591G-71W6",
-            "price": 35990,
-            "img": "https://th-live-03.slatic.net/p/2/acer-aspire-vx5-591g-71w6-i7-7700hq8gb1tbssd128gbgtx-10504gb156-black-1487134905-80785811-140d4c49cdec996d9f8bb4805b2e72d9-webp-zoom.jpg"
         }
     ],
     "recommendProduct": [
@@ -55,12 +49,6 @@
             "name": "BMW Concept i8 6V 2 Motors LN6880 คันใหญ่",
             "price": 4120,
             "img": "https://th-live-01.slatic.net/p/4/bmw-concept-i8-6v-2-motors-ln6880-1495536882-00523902-45b7a49aebd760cf94a2a599a296053d-webp-zoom.jpg"
-        },
-        {
-            "_id": "5",
-            "name": "Rastar รถแบตซุปเปอร์คาร์สำหรับเด็ก Lamborghini Aventador",
-            "price": 9999,
-            "img": "https://th-live-01.slatic.net/p/4/rastar-lamborghini-aventador-orange-1468999892-2624737-0c4c7134523c8555bbe5f3290ad0feed-webp-zoom.jpg"
         }
     ]
 }

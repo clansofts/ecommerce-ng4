@@ -21,7 +21,7 @@ export class ProductListXComponent implements OnInit {
   openProductDetail(_id) {
     // this.router.navigate([AppConfig.routes.heroes + '/' + _id]);
     this.section_1 = false;
-    this.router.navigate(['/productdetail']);
+    this.router.navigate(['/productdetail' + '/' + _id]);
   }
 
   onResize(event) {
