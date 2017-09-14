@@ -26,11 +26,9 @@ export class ProductListXComponent implements OnInit {
 
   onResize(event) {
     const element = event.target.innerWidth;
-    console.log(element);
-
 
     if (element < 950) {
-      this.gridCols = 4;      
+      this.gridCols = 4;
     }
 
     if (element > 950) {
@@ -39,12 +37,12 @@ export class ProductListXComponent implements OnInit {
     }
 
     if (element < 750) {
-      this.gridCols = 2;      
+      this.gridCols = 2;
 
     }
 
     if (element < 360) {
-      this.gridCols = 1;      
+      this.gridCols = 1;
 
     }
   }
